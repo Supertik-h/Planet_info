@@ -56,20 +56,25 @@ const planetsData = [
     }
 ];
 
+
 // Add planets to dropdown menu
 function populatePlanetDropdown() {
     const dropdown = document.getElementById('planet-dropdown');
+    //if dropdown has nothing, hence not dropdown, then returns and does nothing. else runs the rest of the function
     if (!dropdown) return;
 
     planetsData.forEach(planet => {
         const option = document.createElement('option');
         option.value = planet.name;
         option.textContent = planet.name;
+        //fills the dropdown with the next option
         dropdown.appendChild(option);
     });
 }
 
+
 // Create HTML for planet information display
+//idk
 function createPlanetInfoHTML(planet) {
     return `
         <div class="planet-display">
