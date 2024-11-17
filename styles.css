@@ -31,38 +31,25 @@ header h1 {
 
 /* Dashboard Layout */
 .dashboard-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: flex;
+    justify-content: center;
     padding: 2rem;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 /* Section Styles */
-section {
+.planet-section {
     background-color: var(--secondary-bg);
     border-radius: 10px;
     padding: 1.5rem;
+    width: 100%;
+    max-width: 800px;
 }
 
-section h2 {
+.planet-section h2 {
     color: var(--primary-color);
     margin-top: 0;
-}
-
-/* News Section */
-.news-section article {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.news-section img {
-    width: 100%;
-    border-radius: 8px;
-    margin: 0.5rem 0;
 }
 
 /* Planet Section */
@@ -74,78 +61,32 @@ section h2 {
     border: 1px solid var(--primary-color);
     border-radius: 4px;
     margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 .planet-info {
     background: rgba(255, 255, 255, 0.05);
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 8px;
-}
-
-/* Missions Section */
-.mission-form {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.5rem;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
-}
-
-button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: opacity 0.2s;
-}
-
-button:hover {
-    opacity: 0.9;
-}
-
-/* Timeline Styles */
-#timeline-container {
-    margin: 1rem 0;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-}
-
-/* Missions List */
-#missions-list {
     margin-top: 1rem;
 }
 
-.mission-item {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
+.planet-info h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.planet-info p {
+    margin: 0.8rem 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .dashboard-container {
-        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .planet-section {
+        padding: 1rem;
     }
 }

@@ -13,7 +13,6 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
  * Initializes the application
  */
 function initializeApp() {
-    // Add any global initialization here
     console.log('Space Dashboard initialized');
 }
 
