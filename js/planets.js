@@ -11,7 +11,7 @@ const planetsData = [
         climate: "Extreme (-180°C to 430°C)",
         description: "Closest planet to the Sun with extreme temperature variations",
         //imageUrl: "data:image/svg+xml,%3Csvg width='300' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='150' cy='150' r='140' fill='%23a6a6a6'/%3E%3Ccircle cx='100' cy='120' r='20' fill='%23808080'/%3E%3Ccircle cx='180' cy='170' r='30' fill='%23808080'/%3E%3Ccircle cx='150' cy='90' r='15' fill='%23808080'/%3E%3Cellipse cx='120' cy='200' rx='25' ry='20' fill='%23808080'/%3E%3C/svg%3E"
-        imageUrl: '../assets/mercury.png'
+        imageUrl: '/assets/mercury.png'
     },
     {
         name: "Venus",
