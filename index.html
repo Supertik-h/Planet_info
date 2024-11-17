@@ -5,30 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Dashboard - Planet Information</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <h1><i class="fas fa-rocket"></i> Space Dashboard</h1>
+        <h1>Space Dashboard</h1>
     </header>
 
-    <!-- Main Content -->
-    <main class="dashboard-container">
-        <!-- Planet Information Section -->
+    <main class="container">
         <section class="planet-section">
             <h2>Planet Information</h2>
-            <div class="planet-selector">
-                <select id="planet-dropdown">
-                    <option value="">Select a planet</option>
-                </select>
-            </div>
-            <div id="planet-info" class="planet-info"></div>
+            <select id="planet-dropdown">
+                <option value="">Select a planet</option>
+            </select>
+            <div id="planet-info"></div>
         </section>
     </main>
 
-    <!-- JavaScript Files -->
     <script src="js/planets.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>

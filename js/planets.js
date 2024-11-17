@@ -3,62 +3,60 @@
  * Handles planet information display and interaction
  */
 
-// Planet data from CSV converted to JSON
+// Planet data with basic information and image URLs
 const planetsData = [
     {
         name: "Mercury",
         distance_from_earth: 77.3,
         climate: "Extreme (-180°C to 430°C)",
-        inhabitability: "No",
-        description: "Closest planet to the Sun with extreme temperature variations"
+        description: "Closest planet to the Sun with extreme temperature variations",
+        imageUrl: "data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='90' fill='%23a6a6a6'/%3E%3C/svg%3E"
     },
     {
         name: "Venus",
         distance_from_earth: 38.2,
         climate: "Hot (462°C)",
-        inhabitability: "No",
-        description: "Similar in size to Earth but with toxic atmosphere"
+        description: "Similar in size to Earth but with toxic atmosphere",
+        imageUrl: "data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='90' fill='%23e6b800'/%3E%3C/svg%3E"
     },
     {
         name: "Mars",
         distance_from_earth: 225.0,
         climate: "Cold (-63°C)",
-        inhabitability: "Potential",
-        description: "Red planet with potential for future colonization"
+        description: "Red planet with potential for future colonization",
+        imageUrl: "data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='90' fill='%23cc3300'/%3E%3C/svg%3E"
     },
     {
         name: "Jupiter",
         distance_from_earth: 628.7,
         climate: "Gas Giant (-110°C)",
-        inhabitability: "No",
-        description: "Largest planet in our solar system"
+        description: "Largest planet in our solar system",
+        imageUrl: "data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='90' fill='%23cc9966'/%3E%3C/svg%3E"
     },
     {
         name: "Saturn",
         distance_from_earth: 1277.4,
         climate: "Gas Giant (-178°C)",
-        inhabitability: "No",
-        description: "Known for its spectacular ring system"
+        description: "Known for its spectacular ring system",
+        imageUrl: "data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='90' fill='%23d4aa00'/%3E%3C/svg%3E"
     },
     {
         name: "Uranus",
         distance_from_earth: 2719.7,
         climate: "Ice Giant (-224°C)",
-        inhabitability: "No",
-        description: "Tilted on its side with unique rotation"
+        description: "Tilted on its side with unique rotation",
+        imageUrl: "data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='90' fill='%2380b3ff'/%3E%3C/svg%3E"
     },
     {
         name: "Neptune",
         distance_from_earth: 4347.4,
         climate: "Ice Giant (-214°C)",
-        inhabitability: "No",
-        description: "Windiest planet with strong storms"
+        description: "Windiest planet with strong storms",
+        imageUrl: "data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='90' fill='%233366cc'/%3E%3C/svg%3E"
     }
 ];
 
-/**
- * Populates the planet dropdown with options
- */
+// Add planets to dropdown menu
 function populatePlanetDropdown() {
     const dropdown = document.getElementById('planet-dropdown');
     if (!dropdown) return;
@@ -71,25 +69,22 @@ function populatePlanetDropdown() {
     });
 }
 
-/**
- * Creates HTML for planet information
- * @param {Object} planet - Planet data object
- * @returns {string} HTML string for planet information
- */
+// Create HTML for planet information display
 function createPlanetInfoHTML(planet) {
     return `
-        <h3>${planet.name}</h3>
-        <p><strong>Distance from Earth:</strong> ${planet.distance_from_earth} million km</p>
-        <p><strong>Climate:</strong> ${planet.climate}</p>
-        <p><strong>Inhabitability:</strong> ${planet.inhabitability}</p>
-        <p><strong>Description:</strong> ${planet.description}</p>
+        <div class="planet-display">
+            <img src="${planet.imageUrl}" alt="${planet.name}" class="planet-image">
+            <div class="planet-details">
+                <h3>${planet.name}</h3>
+                <p>Distance from Earth: ${planet.distance_from_earth} million km</p>
+                <p>Climate: ${planet.climate}</p>
+                <p>${planet.description}</p>
+            </div>
+        </div>
     `;
 }
 
-/**
- * Updates the planet information display
- * @param {string} planetName - Name of the selected planet
- */
+// Update planet information when selection changes
 function updatePlanetInfo(planetName) {
     const planetInfoContainer = document.getElementById('planet-info');
     if (!planetInfoContainer) return;
@@ -102,9 +97,7 @@ function updatePlanetInfo(planetName) {
     }
 }
 
-/**
- * Initializes the planets section
- */
+// Initialize the planet section
 function initializePlanets() {
     populatePlanetDropdown();
     
@@ -116,5 +109,5 @@ function initializePlanets() {
     }
 }
 
-// Initialize planets when DOM is loaded
+// Start when page loads
 document.addEventListener('DOMContentLoaded', initializePlanets);
