@@ -1,0 +1,27 @@
+.stApp {
+    background-color: #0E1117;
+}
+
+.news-container {
+    background-color: #262730;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.planet-info {
+    background-color: #262730;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.timeline-container {
+    background-color: #262730;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.stButton>button {
+    background-color: #FF4B4B;
+    color: white;
+}
